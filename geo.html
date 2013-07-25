@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Technology Challenge! | AMP'd Challenge Fall 2013</title>
+<meta charset="UTF-8">
+
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<meta name="viewport" content="width=device-width" />
+<META NAME="ROBOTS" CONTENT="NOINDEX">
+
+<script src="geo.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<link rel="stylesheet" href="geo.css"></link>
+</head>
+
+<body onresize = "geo.fixsize();">
+<div id="about">
+  <div id="abouttext">
+    <h3>About/Rules</h3>
+    <p>
+      To complete this <strong>Technology Challenge</strong>, your team must score at least <strong>10 points</strong> on <strong>one</strong> of your iPads. Once your Deputy has confirmed completion of the Challenge, you will proceed to the afternoon Challenge Phase.
+    </p>
+    <p>
+      Points are earned by constructing the geometrical figures in the lower right corner of the screen using a virtual <strong>compass</strong> and <strong>straight edge</strong>. One point is awarded for constructing the figure, another for constructing the figure within an origin circle, and up to two more points for constructing the figure within a limited amount of moves.
+    </p>
+    <p>
+      You can hit Reset to return the number of moves to zero, and Undo/Redo moves just as easily. Use Layer to fade out complicated constructions to the background, and +/- to zoom in and out.
+    </p>
+    <p>
+      Tap the screen to begin. You can click About to see these rules again.
+    </p>
+    <h3>Credits</h3>
+    <p>
+      Original design by <a href="http://sciencevsmagic.net/">Nico Disseldorp</a>, graciously provided for use during the Fall 2013 <a href="#">A.M.P.'d Challenge</a> competition. Adapted by <a href="www.stevenclontz.com">Steven Clontz</a>.
+    </p>
+  </div>
+</div>
+<div id="main" style="opacity:0.15;">
+  <div id="logo"></div>
+
+  <div id="controls" class="controls">
+    <a class="control small" href="javascript:geo.zoomnudge(1);">+</a><!-- can also scroll -->
+    <a class="control small" href="javascript:geo.zoomnudge(-1);">-</a><!-- can also scroll -->
+    <a class="control" href="javascript:geo.undo();">Undo</a><!-- keyboard: Z -->
+    <a class="control" href="javascript:geo.redo()">Redo</a><!-- keyboard: X -->
+    <a class="control" href="javascript:geo.pressreset();">Reset</a><!-- keyboard: R -->
+    <a class="control" href="javascript:geo.newlayer()">Layer</a><!-- keyboard: ZE-->
+    <a class="control" href="javascript:showAbout()">About</a>
+  </div>
+  <div id="sidebar">
+    <div id="sideheader">
+        <a>Points</a>
+        <div id="pointsdiv"> <a id="totalpoints"></a><a>/10</a> </div>
+    </div>
+    <div id="scrollbox">
+      <div id="rewards"></div>
+    </div>
+    <div id="sidefooter">
+        <div id="scorediv"> <a id="runningscore"></a><a> moves</a> </div>
+    </div>
+  </div>
+
+  <canvas id="maincanvas" style="border:0px solid #000000;"></canvas>
+  <canvas id="clonecanvas" style="border:0px solid #000000;" onmousedown="geo.mouse.down(event)" onmouseup="geo.mouse.up(event)" onmousemove="geo.mouse.move(event)" onmouseout="geo.mouse.out(event)"></canvas>
+</div>
+
+<script>
+loadpage ();
+function showAbout() {
+  $("#main").fadeTo('medium', 0.15);
+  $("#about").fadeIn('medium');
+}
+function hideAbout() {
+  $("#about").fadeOut('medium');
+  $("#main").fadeTo('medium', 1);
+}
+$(document).ready(function() {
+  $("#about").click(function() {
+    hideAbout();
+  })
+});
+</script>
+
+
+</body>
+</html>

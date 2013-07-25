@@ -1,0 +1,259 @@
+body
+{
+overflow:none;
+font-family:"Courier New";
+user-select: none;
+-moz-user-select: none;
+-webkit-user-select: none;
+-ms-user-select: none;
+color:black;
+}
+
+#logo
+{
+position:fixed;
+z-index:5;
+bottom: 0;
+left: 0;
+height: 98px;
+width: 200px;
+background: no-repeat url("AMPdLOGO.jpg");
+pointer-events:none;
+}
+
+#controls {
+  position:fixed;
+  top: -1px;
+  right: -1px;
+  margin: auto;
+  z-index:2;
+  width:192px;
+  border-right: 1px #000 solid;
+  border-bottom: 1px #000 solid;
+}
+
+#controls a.control {
+  display:block;
+  float:left;
+  width:191px;
+  height:20px;
+  padding: 10px 0;
+  font-size:20px;
+  border-top: 1px #000 solid;
+  border-left: 1px #000 solid;
+  text-align: center;
+  text-decoration: none;
+}
+
+#controls a.control.small {
+  width:95px;
+}
+
+#about {
+  position:absolute;
+  top: 0px;
+  left: 0px;
+  width:100%;
+  height:100%;
+  z-index:10;
+  display: table; 
+}
+
+#abouttext {
+  display: table-cell; 
+  vertical-align: middle;
+  padding:50px;
+}
+
+#abouttext p, #abouttext h3, #abouttext h5 {
+  text-align: center; 
+}
+
+#main {
+  /*opacity:0.1;*/
+}
+
+#maincanvas
+{
+position:fixed;
+top: 0px;
+left: 0px;
+z-index:-1;
+}
+
+#clonecanvas
+{
+position:fixed;
+top: 0px;
+left: 0px;
+z-index:0;
+}
+
+canvas
+{
+display:block;
+}
+
+canvas.point
+{
+cursor: pointer;
+}
+
+canvas.openhand
+{
+/*cursor: url(openhand.cur), default;*/
+}
+
+p
+{
+font-size:smaller;
+}
+
+#homediv
+{
+position:fixed;
+z-index:2;
+font-size:smaller;
+}
+
+.homelink
+{
+font-style: italic;
+}
+
+a
+{
+color:black;
+}
+
+.hidden
+{
+display:none;
+}
+
+#sidebar
+{
+user-select: none;
+-moz-user-select: none;
+-webkit-user-select: none;
+-ms-user-select: none;
+z-index:2;
+position:fixed;
+right:0px;
+bottom:0;
+overflow:none;
+width:192px;
+text-align: center;
+}
+
+#scrollbox
+{
+overflow:auto;
+bottom:0px;
+}
+
+#sideheader
+{
+z-index:2;
+background-color:#ffffff;
+position:absolute;
+bottom:100%;
+border: 1px solid black;
+width:100%
+}
+
+#sidefooter
+{
+z-index:2;
+background-color:#ffffff;
+position:relative;
+bottom:0;
+border: 1px solid black;
+border-top:none;
+width:100%
+}
+
+table
+{
+margin-left:auto; 
+margin-right:auto;
+border-spacing:0px;
+}
+
+.unlocked
+{
+border-left: 1px solid black;
+border-right: 1px solid black;
+border-bottom: 1px solid black;
+background-color:#ffffff;
+}
+
+.locked
+{
+border-left: 1px solid black;
+border-right: 1px solid black;
+border-bottom: 1px solid black;
+background-color:#ffffff;
+}
+
+.locked a, .locked p
+{
+color:#777777;
+}
+
+#rewards p
+{
+margin:0px;
+}
+
+.unlocked canvas
+{
+vertical-align:middle;
+}
+
+.unlocked:hover
+{
+background-color:#eeeeee;
+cursor: pointer;
+}
+
+.grey
+{
+color:#777777;
+}
+
+.awardblack
+{
+border:1px solid transparent;
+}
+
+.awardgrey
+{
+border:1px solid transparent;
+}
+
+.awardblack:hover
+{
+border:1px solid black;
+}
+
+.awardgrey:hover
+{
+border:1px solid #aaaaaa;
+}
+
+#scorediv
+{
+position:relative;
+display:inline;
+top:0px;
+left:0px;
+}
+
+#pointsdiv
+{
+position:relative;
+display:inline;
+top:0px;
+right:0px;
+}
