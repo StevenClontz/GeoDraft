@@ -30,6 +30,7 @@ pointer-events:none;
   width:192px;
   border-right: 1px #000 solid;
   border-bottom: 1px #000 solid;
+  background: #fff;
 }
 
 #controls a.control {
@@ -139,8 +140,8 @@ user-select: none;
 -ms-user-select: none;
 z-index:2;
 position:fixed;
-right:0px;
-bottom:0;
+left:0;
+top:20px;
 overflow:none;
 width:192px;
 text-align: center;
@@ -159,7 +160,7 @@ background-color:#ffffff;
 position:absolute;
 bottom:100%;
 border: 1px solid black;
-width:100%
+width:190px;
 }
 
 #sidefooter
@@ -170,7 +171,7 @@ position:relative;
 bottom:0;
 border: 1px solid black;
 border-top:none;
-width:100%
+width:190px;
 }
 
 table
